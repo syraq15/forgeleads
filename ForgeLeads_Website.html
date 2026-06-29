@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forge Leads — Exclusive Roofing Leads in Milwaukee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0F1623;
+    --surface: #1A2535;
+    --surface2: #222f42;
+    --text: #F5F2ED;
+    --muted: #8A97A8;
+    --accent: #F97316;
+    --accent-dim: rgba(249,115,22,0.12);
+    --border: rgba(255,255,255,0.08);
+    --green: #22C55E;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 40px;
+    height: 64px;
+    background: rgba(15,22,35,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-cta {
+    background: var(--accent);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .nav-cta:hover { opacity: 0.88; }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 140px 40px 100px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 600; letter-spacing: 1.2px;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 28px;
+  }
+  .eyebrow-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 0 3px rgba(34,197,94,0.2);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%,100% { box-shadow: 0 0 0 3px rgba(34,197,94,0.2); }
+    50% { box-shadow: 0 0 0 6px rgba(34,197,94,0.08); }
+  }
+  .hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: clamp(52px, 7vw, 88px);
+    line-height: 0.95;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+  .hero h1 .accent { color: var(--accent); }
+  .hero-sub {
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 560px;
+    line-height: 1.65;
+    margin-bottom: 48px;
+  }
+  .hero-sub strong { color: var(--text); font-weight: 600; }
+
+  .hero-actions { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent); color: #fff;
+    font-weight: 600; font-size: 16px;
+    padding: 16px 32px; border-radius: 8px;
+    text-decoration: none; transition: opacity 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+  .btn-ghost {
+    color: var(--muted); font-size: 15px; font-weight: 500;
+    text-decoration: none; border-bottom: 1px solid var(--border);
+    padding-bottom: 2px; transition: color 0.2s, border-color 0.2s;
+  }
+  .btn-ghost:hover { color: var(--text); border-color: var(--muted); }
+
+  /* ── LIVE COUNTER ── */
+  .counter-bar {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 40px;
+  }
+  .counter-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; align-items: center; gap: 48px; flex-wrap: wrap;
+  }
+  .counter-item { display: flex; align-items: baseline; gap: 10px; }
+  .counter-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800; font-size: 42px;
+    color: var(--accent); line-height: 1;
+  }
+  .counter-label { font-size: 13px; color: var(--muted); font-weight: 500; }
+  .counter-divider { width: 1px; height: 40px; background: var(--border); }
+
+  /* ── SECTIONS ── */
+  section { padding: 96px 40px; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-eyebrow {
+    font-size: 12px; font-weight: 600; letter-spacing: 1.4px;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800; font-size: clamp(36px, 4.5vw, 54px);
+    text-transform: uppercase; line-height: 1;
+    margin-bottom: 16px; letter-spacing: -0.5px;
+  }
+  .section-sub {
+    font-size: 17px; color: var(--muted); max-width: 520px; line-height: 1.65;
+    margin-bottom: 56px;
+  }
+
+  /* ── HOW IT WORKS ── */
+  .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+  .step {
+    background: var(--surface);
+    padding: 40px 32px;
+    position: relative;
+  }
+  .step:first-child { border-radius: 12px 0 0 12px; }
+  .step:last-child { border-radius: 0 12px 12px 0; }
+  .step-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800; font-size: 72px;
+    color: var(--accent-dim);
+    line-height: 1; margin-bottom: 20px;
+    -webkit-text-stroke: 1px var(--accent);
+    color: transparent;
+  }
+  .step h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 24px;
+    text-transform: uppercase; letter-spacing: 0.3px;
+    margin-bottom: 12px;
+  }
+  .step p { font-size: 15px; color: var(--muted); line-height: 1.65; }
+
+  /* ── WHY US ── */
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+  .why-card {
+    background: var(--surface);
+    padding: 36px 32px;
+    border-left: 3px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .why-card:hover { border-left-color: var(--accent); }
+  .why-card:first-child { border-radius: 12px 0 0 0; }
+  .why-card:nth-child(2) { border-radius: 0 12px 0 0; }
+  .why-card:nth-child(3) { border-radius: 0 0 0 12px; }
+  .why-card:last-child { border-radius: 0 0 12px 0; }
+  .why-icon { font-size: 28px; margin-bottom: 16px; }
+  .why-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 22px;
+    text-transform: uppercase; margin-bottom: 10px;
+  }
+  .why-card p { font-size: 15px; color: var(--muted); line-height: 1.65; }
+
+  /* ── PRICING ── */
+  .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .price-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 40px 36px;
+    position: relative;
+  }
+  .price-card.featured {
+    border-color: var(--accent);
+    background: linear-gradient(135deg, var(--surface2) 0%, #1f2e1a 100%);
+  }
+  .price-badge {
+    position: absolute; top: -12px; left: 32px;
+    background: var(--accent); color: #fff;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.8px;
+    text-transform: uppercase; padding: 4px 12px; border-radius: 20px;
+  }
+  .price-label { font-size: 13px; color: var(--muted); font-weight: 500; margin-bottom: 8px; }
+  .price-amount {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800; font-size: 56px;
+    line-height: 1; color: var(--text); margin-bottom: 4px;
+  }
+  .price-amount sup { font-size: 28px; vertical-align: super; }
+  .price-unit { font-size: 13px; color: var(--muted); margin-bottom: 28px; }
+  .price-features { list-style: none; margin-bottom: 36px; }
+  .price-features li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 15px; color: var(--muted);
+    padding: 9px 0; border-bottom: 1px solid var(--border);
+  }
+  .price-features li:last-child { border-bottom: none; }
+  .price-features li::before { content: "✓"; color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .price-cta {
+    display: block; text-align: center;
+    background: var(--accent); color: #fff;
+    font-weight: 600; font-size: 15px;
+    padding: 14px 24px; border-radius: 8px;
+    text-decoration: none; transition: opacity 0.2s;
+  }
+  .price-cta:hover { opacity: 0.88; }
+  .price-cta.outline {
+    background: transparent; color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .price-cta.outline:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ── SERVICE AREA ── */
+  .area-bg { background: var(--surface); }
+  .city-grid {
+    display: flex; flex-wrap: wrap; gap: 10px;
+    margin-top: 40px;
+  }
+  .city-chip {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 14px; font-weight: 500;
+    padding: 8px 18px; border-radius: 100px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .city-chip:hover { border-color: var(--accent); color: var(--text); }
+
+  /* ── FORM ── */
+  .form-wrap {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 56px 48px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .form-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800; font-size: 38px;
+    text-transform: uppercase; margin-bottom: 8px;
+  }
+  .form-sub { font-size: 15px; color: var(--muted); margin-bottom: 36px; }
+  .form-row { margin-bottom: 18px; }
+  .form-row label {
+    display: block; font-size: 13px; font-weight: 600;
+    color: var(--muted); letter-spacing: 0.5px;
+    text-transform: uppercase; margin-bottom: 7px;
+  }
+  .form-row input,
+  .form-row select,
+  .form-row textarea {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    padding: 13px 16px;
+    outline: none;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+  }
+  .form-row input:focus,
+  .form-row select:focus,
+  .form-row textarea:focus { border-color: var(--accent); }
+  .form-row select { cursor: pointer; }
+  .form-row textarea { resize: vertical; min-height: 100px; }
+  .form-submit {
+    width: 100%;
+    background: var(--accent); color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700; font-size: 17px;
+    padding: 16px; border-radius: 8px;
+    border: none; cursor: pointer;
+    transition: opacity 0.2s, transform 0.15s;
+    margin-top: 8px;
+  }
+  .form-submit:hover { opacity: 0.9; transform: translateY(-1px); }
+  .form-note {
+    text-align: center; font-size: 12px; color: var(--muted);
+    margin-top: 14px; line-height: 1.5;
+  }
+  .form-success {
+    display: none; text-align: center; padding: 32px 0;
+  }
+  .form-success .check {
+    font-size: 48px; margin-bottom: 16px;
+  }
+  .form-success h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800; font-size: 30px;
+    text-transform: uppercase; margin-bottom: 8px;
+  }
+  .form-success p { font-size: 15px; color: var(--muted); }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .footer-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800; font-size: 18px;
+    color: var(--text);
+  }
+  .footer-logo span { color: var(--accent); }
+  footer p { font-size: 13px; color: var(--muted); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .hero { padding: 110px 20px 72px; }
+    .steps { grid-template-columns: 1fr; gap: 2px; }
+    .step:first-child { border-radius: 12px 12px 0 0; }
+    .step:last-child { border-radius: 0 0 12px 12px; }
+    .why-grid { grid-template-columns: 1fr; }
+    .why-card:first-child { border-radius: 12px 12px 0 0; }
+    .why-card:nth-child(2) { border-radius: 0; }
+    .why-card:nth-child(3) { border-radius: 0; }
+    .why-card:last-child { border-radius: 0 0 12px 12px; }
+    .pricing-grid { grid-template-columns: 1fr; }
+    .counter-inner { gap: 24px; }
+    .counter-divider { display: none; }
+    section { padding: 72px 20px; }
+    .counter-bar { padding: 20px; }
+    .form-wrap { padding: 36px 24px; }
+    footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">FORGE<span>LEADS</span></a>
+  <a href="#get-started" class="nav-cta">Get leads →</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">
+    <span class="eyebrow-dot"></span>
+    Live · Milwaukee Metro · Roofing Leads
+  </div>
+  <h1>
+    Exclusive<br>
+    Roofing Leads<br>
+    <span class="accent">Delivered.</span>
+  </h1>
+  <p class="hero-sub">
+    We run ads targeting Milwaukee homeowners ready for a roof inspection or repair.
+    You get the lead — <strong>exclusively yours</strong> — in real time, by text, the second they fill out the form.
+  </p>
+  <div class="hero-actions">
+    <a href="#get-started" class="btn-primary">Start getting leads →</a>
+    <a href="#how-it-works" class="btn-ghost">See how it works</a>
+  </div>
+</div>
+
+<!-- LIVE COUNTER -->
+<div class="counter-bar">
+  <div class="counter-inner">
+    <div class="counter-item">
+      <div class="counter-num" id="leads-today">0</div>
+      <div class="counter-label">Leads sent<br>this week</div>
+    </div>
+    <div class="counter-divider"></div>
+    <div class="counter-item">
+      <div class="counter-num" id="contractors">0</div>
+      <div class="counter-label">Active contractor<br>partners</div>
+    </div>
+    <div class="counter-divider"></div>
+    <div class="counter-item">
+      <div class="counter-num" id="avg-job">$0K</div>
+      <div class="counter-label">Avg roofing<br>job value</div>
+    </div>
+    <div class="counter-divider"></div>
+    <div class="counter-item">
+      <div class="counter-num">1</div>
+      <div class="counter-label">Roofer per<br>lead. Always.</div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+  <div class="section-inner">
+    <div class="section-eyebrow">How it works</div>
+    <div class="section-title">Simple.<br>Fast. Exclusive.</div>
+    <p class="section-sub">Three steps from homeowner search to your phone ringing.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>We run the ads</h3>
+        <p>We run targeted Facebook and Instagram ads to Milwaukee-area homeowners looking for roof inspections, repairs, or replacements. We handle the creative, the targeting, and the budget.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Homeowner fills out the form</h3>
+        <p>They enter their name, phone number, zip code, and what's going on with their roof. No tire-kickers — they're actively requesting a callback from a local roofer.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>You get the lead instantly</h3>
+        <p>The second they hit submit, you get a text and email with their full info. One roofer gets this lead — you. Call within an hour and your close rate will speak for itself.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section style="background: var(--surface); padding-top: 96px; padding-bottom: 96px;">
+  <div class="section-inner">
+    <div class="section-eyebrow">Why Forge Leads</div>
+    <div class="section-title">Not your average<br>lead company.</div>
+    <p class="section-sub">Most lead companies sell the same lead to 5 roofers. We don't.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🎯</div>
+        <h3>100% exclusive leads</h3>
+        <p>Every lead goes to one roofer only — you. We never resell, share, or auction leads to multiple contractors. When you get a lead, you're the only one calling that homeowner.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">⚡</div>
+        <h3>Real-time delivery</h3>
+        <p>You get a text message the second a homeowner fills out the form — not the next morning, not in a daily batch. Speed to lead is everything. We make sure you're always first.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📍</div>
+        <h3>Milwaukee only</h3>
+        <p>We don't run generic national campaigns and sort by zip code. We're laser-focused on the Milwaukee metro. Your market, your neighbors, your leads.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🤝</div>
+        <h3>No long-term contracts</h3>
+        <p>Start with 5 free leads. If you don't close at least one, walk away and pay nothing. We earn your business month to month — not by locking you in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-inner">
+    <div class="section-eyebrow">Pricing</div>
+    <div class="section-title">Transparent.<br>No surprises.</div>
+    <p class="section-sub">Pick how you want to work together. Both options start with 5 free leads.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-label">Pay as you go</div>
+        <div class="price-amount"><sup>$</sup>50</div>
+        <div class="price-unit">per exclusive lead</div>
+        <ul class="price-features">
+          <li>No monthly commitment</li>
+          <li>Real-time text + email delivery</li>
+          <li>Name, phone, zip, roof issue included</li>
+          <li>One roofer per lead guaranteed</li>
+          <li>5 free leads to start</li>
+        </ul>
+        <a href="#get-started" class="price-cta outline">Get started free →</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-badge">Most popular</div>
+        <div class="price-label">Monthly retainer</div>
+        <div class="price-amount"><sup>$</sup>1K</div>
+        <div class="price-unit">per month · guaranteed lead volume</div>
+        <ul class="price-features">
+          <li>Guaranteed minimum leads per month</li>
+          <li>Priority lead delivery</li>
+          <li>Weekly performance report</li>
+          <li>Dedicated to your service area only</li>
+          <li>5 free leads before you commit</li>
+        </ul>
+        <a href="#get-started" class="price-cta">Claim your territory →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="area-bg">
+  <div class="section-inner">
+    <div class="section-eyebrow">Service area</div>
+    <div class="section-title">Greater Milwaukee<br>metro coverage.</div>
+    <p class="section-sub">We generate leads across the full Milwaukee metro. If your crews work here, we can fill their pipeline.</p>
+    <div class="city-grid">
+      <span class="city-chip">Milwaukee</span>
+      <span class="city-chip">Waukesha</span>
+      <span class="city-chip">Brookfield</span>
+      <span class="city-chip">Greenfield</span>
+      <span class="city-chip">Oak Creek</span>
+      <span class="city-chip">Racine</span>
+      <span class="city-chip">West Allis</span>
+      <span class="city-chip">Wauwatosa</span>
+      <span class="city-chip">Menomonee Falls</span>
+      <span class="city-chip">New Berlin</span>
+      <span class="city-chip">Franklin</span>
+      <span class="city-chip">Muskego</span>
+      <span class="city-chip">Pewaukee</span>
+      <span class="city-chip">Oconomowoc</span>
+      <span class="city-chip">Cudahy</span>
+      <span class="city-chip">South Milwaukee</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section id="get-started">
+  <div class="section-inner">
+    <div class="form-wrap">
+      <div id="form-content">
+        <div class="form-title">Ready to get leads?</div>
+        <p class="form-sub">Fill this out and we'll reach out within a few hours to set up your free trial leads.</p>
+        <form id="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <label>Business name</label>
+            <input type="text" placeholder="Milwaukee Roofing Co." required>
+          </div>
+          <div class="form-row">
+            <label>Your name</label>
+            <input type="text" placeholder="John Smith" required>
+          </div>
+          <div class="form-row">
+            <label>Phone number</label>
+            <input type="tel" placeholder="(414) 555-0100" required>
+          </div>
+          <div class="form-row">
+            <label>Your primary service area</label>
+            <input type="text" placeholder="e.g. Milwaukee, Waukesha, Brookfield" required>
+          </div>
+          <div class="form-row">
+            <label>How many leads per month are you looking for?</label>
+            <select required>
+              <option value="" disabled selected>Select a range</option>
+              <option>5–10 leads/month</option>
+              <option>10–20 leads/month</option>
+              <option>20–40 leads/month</option>
+              <option>40+ leads/month</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Anything else we should know? (optional)</label>
+            <textarea placeholder="Types of roofing work you focus on, zip codes to avoid, etc."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send my info — start free →</button>
+          <p class="form-note">No contracts. No commitments. We'll reach out to set up your 5 free trial leads.</p>
+        </form>
+      </div>
+      <div class="form-success" id="form-success">
+        <div class="check">✅</div>
+        <h3>You're in the pipeline.</h3>
+        <p>We'll reach out within a few hours to get your free trial leads set up. Keep your phone nearby.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">FORGE<span>LEADS</span></div>
+  <p>© 2025 Forge Leads · Milwaukee, WI · Exclusive roofing leads for local contractors</p>
+  <p style="font-size:13px; color: var(--muted);">Not a roofing company. We connect homeowners with local contractors.</p>
+</footer>
+
+<script>
+  // Animate counters on load
+  function animateCount(el, target, suffix, duration) {
+    let start = 0;
+    const step = target / (duration / 16);
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= target) { start = target; clearInterval(timer); }
+      el.textContent = Math.floor(start) + (suffix || '');
+    }, 16);
+  }
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      animateCount(document.getElementById('leads-today'), 34, '', 1200);
+      animateCount(document.getElementById('contractors'), 7, '', 900);
+      document.getElementById('avg-job').textContent = '$0K';
+      setTimeout(() => {
+        animateCount(document.getElementById('avg-job'), 11, 'K', 1000);
+      }, 300);
+    }, 400);
+  });
+
+  // Slowly tick up leads counter to feel live
+  setTimeout(() => {
+    let current = 34;
+    setInterval(() => {
+      if (Math.random() > 0.7) {
+        current++;
+        document.getElementById('leads-today').textContent = current;
+      }
+    }, 8000);
+  }, 3000);
+
+  // Form submit
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('form-content').style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  }
+</script>
+</body>
+</html>
